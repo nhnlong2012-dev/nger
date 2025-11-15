@@ -50,6 +50,16 @@
       <height>121</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #0078D7;   /* Màu nền */
+    color: white;                /* Màu chữ */
+    border-radius: 15px;         /* Bo tròn 15px */
+    border: none;                /* Bỏ viền */
+    padding: 6px 12px;           /* Cách lề trong nút */
+}
+</string>
+    </property>
     <property name="text">
      <string>home</string>
     </property>
@@ -68,6 +78,16 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #0078D7;   /* Màu nền */
+    color: white;                /* Màu chữ */
+    border-radius: 15px;         /* Bo tròn 15px */
+    border: none;                /* Bỏ viền */
+    padding: 6px 12px;           /* Cách lề trong nút */
+}
+</string>
+    </property>
     <property name="text">
      <string>about</string>
     </property>
@@ -85,6 +105,16 @@
      <font>
       <pointsize>14</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #0078D7;   /* Màu nền */
+    color: white;                /* Màu chữ */
+    border-radius: 15px;         /* Bo tròn 15px */
+    border: none;                /* Bỏ viền */
+    padding: 6px 12px;           /* Cách lề trong nút */
+}
+</string>
     </property>
     <property name="text">
      <string>profile</string>
@@ -124,7 +154,7 @@
      <x>0</x>
      <y>0</y>
      <width>1351</width>
-     <height>37</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

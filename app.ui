@@ -2,16 +2,26 @@
 <ui version="4.0">
  <class>Login</class>
  <widget class="QMainWindow" name="Login">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>1353</width>
-    <height>705</height>
+    <height>702</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #000000;   /* Màu đen */
+    color: white;                /* Màu chữ trắng cho dễ nhìn */
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -120,6 +130,16 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #0078D7;   /* Màu nền */
+    color: white;                /* Màu chữ */
+    border-radius: 15px;         /* Bo tròn 15px */
+    border: none;                /* Bỏ viền */
+    padding: 6px 12px;           /* Cách lề trong nút */
+}
+</string>
+    </property>
     <property name="text">
      <string>Đăng nhập</string>
     </property>
@@ -129,7 +149,7 @@
      <rect>
       <x>10</x>
       <y>400</y>
-      <width>93</width>
+      <width>111</width>
       <height>28</height>
      </rect>
     </property>
@@ -138,8 +158,40 @@
       <pointsize>9</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #0078D7;   /* Màu nền */
+    color: white;                /* Màu chữ */
+    border-radius: 15px;         /* Bo tròn 15px */
+    border: none;                /* Bỏ viền */
+    padding: 6px 12px;           /* Cách lề trong nút */
+}
+</string>
+    </property>
     <property name="text">
      <string>tạo tài khoản</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>141</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Pictures/F-Dyq8Aa8AArnGf.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>

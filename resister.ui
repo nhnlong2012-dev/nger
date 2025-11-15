@@ -13,6 +13,13 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #000000;   /* Màu đen */
+    color: white;                /* Màu chữ trắng cho dễ nhìn */
+}
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -148,8 +155,24 @@
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #0078D7;   /* Màu nền */
+    color: white;                /* Màu chữ */
+    border-radius: 15px;         /* Bo tròn 15px */
+    border: none;                /* Bỏ viền */
+    padding: 6px 12px;           /* Cách lề trong nút */
+}
+</string>
+    </property>
     <property name="text">
      <string>Tạo tài khoản</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QRadioButton" name="radioButton">
