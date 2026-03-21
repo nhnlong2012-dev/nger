@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserWindow</class>
+ <widget class="QMainWindow" name="UserWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1040</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>PET STORE | User</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #f7f1e8, stop:0.55 #e7efe8, stop:1 #e1e8f4);
+    font-family: &quot;Segoe UI&quot;;
+}
+
+QFrame#profileCard,
+QFrame#formCard {
+    background-color: rgba(255, 252, 247, 245);
+    border: 1px solid rgba(24, 57, 43, 25);
+    border-radius: 28px;
+}
+
+QLabel#lblPageTag {
+    color: #b25b3a;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+QLabel#lblPageTitle {
+    color: #173326;
+    font-size: 24pt;
+    font-weight: 700;
+}
+
+QLabel#lblPageSubtitle,
+QLabel#lblAvatarHint,
+QLabel#lblRoleTitle,
+QLabel#lblCreatedAtTitle,
+QLabel#lblRoleValue,
+QLabel#lblCreatedAtValue,
+QLabel#lblUsernameTitle,
+QLabel#lblFullNameTitle,
+QLabel#lblEmailTitle,
+QLabel#lblPhoneTitle,
+QLabel#lblAddressTitle,
+QLabel#lblPasswordTitle,
+QLabel#lblConfirmPasswordTitle {
+    color: #506056;
+}
+
+QLabel#lblAvatarPreview {
+    background-color: rgba(24, 57, 43, 10);
+    border: 1px solid rgba(24, 57, 43, 25);
+    border-radius: 26px;
+    color: #173326;
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+QLineEdit {
+    min-height: 44px;
+    background-color: #fffdf8;
+    border: 1px solid #d8e1d8;
+    border-radius: 16px;
+    padding: 0 14px;
+    color: #173326;
+    font-size: 10.5pt;
+}
+
+QLineEdit:focus {
+    border: 2px solid #d96b43;
+}
+
+QPushButton {
+    min-height: 42px;
+    border-radius: 16px;
+    border: none;
+    font-size: 10.5pt;
+    font-weight: 700;
+    padding: 0 16px;
+}
+
+QPushButton#btnSaveUser,
+QPushButton#btnChooseAvatar {
+    background-color: #d96b43;
+    color: white;
+}
+
+QPushButton#btnSaveUser:hover,
+QPushButton#btnChooseAvatar:hover {
+    background-color: #c45e39;
+}
+
+QPushButton#btnBackHome,
+QPushButton#btnClearAvatar {
+    background-color: rgba(24, 57, 43, 10);
+    color: #173326;
+    border: 1px solid rgba(24, 57, 43, 35);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="rootLayout">
+    <property name="spacing">
+     <number>18</number>
+    </property>
+    <property name="leftMargin">
+     <number>22</number>
+    </property>
+    <property name="topMargin">
+     <number>22</number>
+    </property>
+    <property name="rightMargin">
+     <number>22</number>
+    </property>
+    <property name="bottomMargin">
+     <number>22</number>
+    </property>
+    <item stretch="2">
+     <widget class="QFrame" name="profileCard">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="profileLayout">
+       <property name="leftMargin">
+        <number>24</number>
+       </property>
+       <property name="topMargin">
+        <number>24</number>
+       </property>
+       <property name="rightMargin">
+        <number>24</number>
+       </property>
+       <property name="bottomMargin">
+        <number>24</number>
+       </property>
+       <property name="spacing">
+        <number>14</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lblPageTag">
+         <property name="text">
+          <string>USER PROFILE</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblPageTitle">
+         <property name="text">
+          <string>Thông tin tài khoản</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+         <widget class="QLabel" name="lblPageSubtitle">
+          <property name="text">
+           <string>Cập nhật tên hiển thị, email, số điện thoại, địa chỉ nhận hàng, mật khẩu và avatar cho user hiện tại.</string>
+          </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblAvatarPreview">
+         <property name="minimumSize">
+          <size>
+           <width>240</width>
+           <height>240</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>240</width>
+           <height>240</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="text">
+          <string>AVATAR</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblAvatarHint">
+         <property name="text">
+          <string>Chọn ảnh `.png`, `.jpg`, `.jpeg` hoặc `.bmp`. Avatar sẽ được copy vào thư mục dự án.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnChooseAvatar">
+         <property name="text">
+          <string>Tải avatar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnClearAvatar">
+         <property name="text">
+          <string>Xóa avatar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblRoleTitle">
+         <property name="text">
+          <string>Quyền hiện tại</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblRoleValue">
+         <property name="styleSheet">
+          <string notr="true">color: #173326; font-size: 12pt; font-weight: 700;</string>
+         </property>
+         <property name="text">
+          <string>user</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblCreatedAtTitle">
+         <property name="text">
+          <string>Ngày tạo tài khoản</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblCreatedAtValue">
+         <property name="styleSheet">
+          <string notr="true">color: #173326; font-size: 10.5pt; font-weight: 700;</string>
+         </property>
+         <property name="text">
+          <string>2026-03-21 00:00:00</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="profileSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item stretch="3">
+     <widget class="QFrame" name="formCard">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="formLayout">
+       <property name="leftMargin">
+        <number>28</number>
+       </property>
+       <property name="topMargin">
+        <number>28</number>
+       </property>
+       <property name="rightMargin">
+        <number>28</number>
+       </property>
+       <property name="bottomMargin">
+        <number>28</number>
+       </property>
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="lblUsernameTitle">
+         <property name="text">
+          <string>Tên tài khoản</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="inputUsername">
+         <property name="placeholderText">
+          <string>Nhập username</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblFullNameTitle">
+         <property name="text">
+          <string>Họ và tên</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="inputFullName">
+         <property name="placeholderText">
+          <string>Nhập họ và tên</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblEmailTitle">
+         <property name="text">
+          <string>Email</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="inputEmail">
+         <property name="placeholderText">
+          <string>Nhập email</string>
+         </property>
+        </widget>
+       </item>
+        <item>
+         <widget class="QLabel" name="lblPhoneTitle">
+          <property name="text">
+           <string>Số điện thoại</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="inputPhone">
+          <property name="placeholderText">
+           <string>Nhập số điện thoại</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblAddressTitle">
+          <property name="text">
+           <string>Địa chỉ nhận hàng</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="inputAddress">
+          <property name="placeholderText">
+           <string>Nhập địa chỉ nhận hàng</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblPasswordTitle">
+          <property name="text">
+           <string>Mật khẩu mới</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="inputPassword">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Để trống nếu không đổi mật khẩu</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblConfirmPasswordTitle">
+         <property name="text">
+          <string>Nhập lại mật khẩu mới</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="inputConfirmPassword">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Nhập lại mật khẩu mới</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="formSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="actionLayout">
+         <property name="spacing">
+          <number>12</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="btnSaveUser">
+           <property name="text">
+            <string>Lưu thay đổi</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnBackHome">
+           <property name="text">
+            <string>Quay lại Home</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

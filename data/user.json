@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "full_name": "Administrator",
+    "email": "admin@petstore.local",
+    "phone": "",
+    "address": "",
+    "password": "admin",
+    "role": "admin",
+    "avatar": "",
+    "created_at": "2026-03-21T00:00:00"
+  },
+  {
+    "id": 2,
+    "username": "test",
+    "full_name": "",
+    "email": "test@gmail.com",
+    "phone": "",
+    "address": "",
+    "password": "123456789",
+    "role": "user",
+    "avatar": "",
+    "created_at": "2026-03-21T17:34:25"
+  }
+]

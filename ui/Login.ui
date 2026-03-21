@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Login</class>
+ <widget class="QMainWindow" name="Login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>760</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>PET STORE | Đăng nhập</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #f6efe5, stop:0.55 #e7f0ea, stop:1 #dfe8f5);
+    font-family: &quot;Segoe UI&quot;;
+}
+
+QFrame#heroPanel {
+    background-color: #18392b;
+    border-radius: 32px;
+}
+
+QFrame#heroGlass {
+    background-color: rgba(255, 255, 255, 22);
+    border: 1px solid rgba(255, 255, 255, 30);
+    border-radius: 24px;
+}
+
+QFrame#formCard {
+    background-color: rgba(255, 252, 247, 245);
+    border: 1px solid rgba(24, 57, 43, 25);
+    border-radius: 32px;
+}
+
+QLabel#brandBadge {
+    background-color: rgba(255, 255, 255, 25);
+    color: #f7f2e9;
+    border-radius: 16px;
+    padding: 8px 14px;
+    font-size: 11pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+QLabel#heroTitle {
+    color: white;
+    font-size: 30pt;
+    font-weight: 700;
+}
+
+QLabel#heroSubtitle,
+QLabel#heroMetaTitle,
+QLabel#heroMetaText {
+    color: #dce9e1;
+}
+
+QLabel#formEyebrow {
+    color: #b25b3a;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+QLabel#formTitle {
+    color: #173326;
+    font-size: 24pt;
+    font-weight: 700;
+}
+
+QLabel#formSubtitle,
+QLabel#emailLabel,
+QLabel#passwordLabel,
+QLabel#helpText,
+QLabel#hintText {
+    color: #506056;
+}
+
+QLabel#emailLabel,
+QLabel#passwordLabel {
+    font-size: 10pt;
+    font-weight: 600;
+}
+
+QLineEdit {
+    background-color: #fffdf8;
+    border: 1px solid #d8e1d8;
+    border-radius: 18px;
+    padding: 0 18px;
+    color: #173326;
+    selection-background-color: #d96b43;
+    font-size: 11pt;
+}
+
+QLineEdit:focus {
+    border: 2px solid #d96b43;
+    background-color: #ffffff;
+}
+
+QPushButton#btnLogin {
+    background-color: #d96b43;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-size: 12pt;
+    font-weight: 700;
+}
+
+QPushButton#btnLogin:hover {
+    background-color: #c65f39;
+}
+
+QPushButton#btnLogin:pressed {
+    background-color: #af5331;
+}
+
+QPushButton#createAccount {
+    background-color: transparent;
+    color: #18392b;
+    border: 1px solid rgba(24, 57, 43, 55);
+    border-radius: 16px;
+    font-size: 10pt;
+    font-weight: 600;
+}
+
+QPushButton#createAccount:hover {
+    background-color: rgba(24, 57, 43, 10);
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="heroPanel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>38</y>
+      <width>520</width>
+      <height>684</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="brandBadge">
+     <property name="geometry">
+      <rect>
+       <x>42</x>
+       <y>42</y>
+       <width>150</width>
+       <height>38</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PET STORE</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="heroTitle">
+     <property name="geometry">
+      <rect>
+       <x>42</x>
+       <y>132</y>
+       <width>420</width>
+       <height>241</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Chăm thú cưng
+bằng trải nghiệm
+mượt và gọn.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="formCard">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>86</y>
+      <width>530</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="formEyebrow">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>48</y>
+       <width>180</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>WELCOME BACK</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="formTitle">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>88</y>
+       <width>330</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Đăng nhập</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="formSubtitle">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>146</y>
+       <width>410</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Dùng tài khoản quản trị để truy cập màn hình chính và tiếp tục quản lý cửa hàng.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="emailLabel">
+     <property name="geometry">
+      <rect>
+       <x>54</x>
+       <y>234</y>
+       <width>180</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tài khoản hoặc email</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Email">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>266</y>
+       <width>426</width>
+       <height>56</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Nhập tài khoản hoặc email</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="passwordLabel">
+     <property name="geometry">
+      <rect>
+       <x>54</x>
+       <y>344</y>
+       <width>180</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mật khẩu</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Password">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>376</y>
+       <width>426</width>
+       <height>56</height>
+      </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Nhập mật khẩu</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="helpText">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>446</y>
+       <width>322</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Thông tin mặc định hiện tại là admin / admin.</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnLogin">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>492</y>
+       <width>426</width>
+       <height>58</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Đăng nhập</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="createAccount">
+     <property name="geometry">
+      <rect>
+       <x>52</x>
+       <y>556</y>
+       <width>170</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tạo tài khoản</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="hintText">
+     <property name="geometry">
+      <rect>
+       <x>242</x>
+       <y>564</y>
+       <width>251</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Chưa có tài khoản? Mở form đăng ký.</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
